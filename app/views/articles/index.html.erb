@@ -1,11 +1,11 @@
-<h1>Listing articles!</h1>
+<h1>Список</h1>
 
-<%= link_to 'New article', new_article_path %>
+
 
 <table>
 	<tr>
-		<th>Title</th>
-		<th>Text</th>
+		<th>Автор</th>
+		<th>Поезія</th>
 		<th colspan="2"></th>		
 	</tr>
 
@@ -13,12 +13,11 @@
 		<tr>
 			<td><%= article.title %></td>
 			<td><%= article.text %></td>
-			<td><%= link_to 'Show', article_path(article) %>
-</td>
-	<td><%= link_to 'Edit', edit_article_path(article) %></td>
-		<td><%= link_to 'Destroy', article_path(article),
+			<td><%= link_to 'Читати', article_path(article) %></td>
+			<td><%= link_to 'Редагувати', edit_article_path(article) %></td>
+			<td><%= link_to 'Видалити', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Ви впевнені?' } %></td>
 		</tr>
 	<% end %>
 </table>
